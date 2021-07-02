@@ -1,0 +1,50 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+plugins {
+    id 'java'
+}
+
+group = 'fr.Mathildeuh'
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    google()
+    maven {
+        name = 'sonatype'
+        url = 'https://oss.sonatype.org/content/groups/public/'
+    }
+    maven {
+        name = 'mrcubee-public'
+        url = 'http://nexus.mrcubee.net/repository/minecraft/'
+        metadataSources {
+            mavenPom()
+            artifact()
+        }
+    }
+//    maven {
+//        name = 'Dakani Nexus Repo'
+//        url = 'https://repo.dakanilabs.com/repository/maven-releases/'
+//        metadataSources {
+//            mavenPom()
+//            artifact()
+//        }
+//    }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+//    implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.36.0'
+//    implementation 'lib.PatPeter.SQLibrary:SQLibrary:7.1'
+}
+
+processResources {
+    from(sourceSets.main.resources.srcDirs) {
+        filter ReplaceTokens, tokens: [version: version]
+    }
+}
+
+compileJava.options.encoding("UTF-8")
+setLibsDirName("C:\\Users\\preve\\Desktop\\Spigot 1.8.8\\plugins")

@@ -1,0 +1,41 @@
+# Created by Mathildeuh
+# For any questions/problems: Mathildeuh#0001
+
+# The arena world
+world: "world"
+
+# The spawn location
+spawn:
+  x: 0
+  y: 7
+  z: 0
+
+# The spawn area
+pos1:
+  x: 0
+  y: 0
+  z: 0
+
+pos2:
+  x: 1
+  y: 1
+  z: 1
+
+# Language config
+BlockPlaceNoPermission: "§cError: §7Sorry, but you doesn't have permission to place blocks here !"
+BlockBreakNoPermission: "§cError: §7Sorry, but you doesn't have permission to break blocks here !"
+
+# Connections configs
+JoinMessage:
+  customMessage: "&a%player% has joined."
+
+QuitMessage:
+  customMessage: "&c%player% has quit."
+
+DeathMessage:
+  customMessage: "§c%victim% §was slain by §c%attacker% §6§lGG!"
+  inActionBar: false
+
+healthUnderName:
+  enabled: true
+  suffix: "§cPV"
