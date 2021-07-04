@@ -30,6 +30,7 @@ public class LDeath implements Listener {
                     }
                 }
                 return;
+
             }
 
             for (Player players : Bukkit.getOnlinePlayers()) {
