@@ -1,2 +1,2 @@
 # FFANoDebuff
-FFA with NoDebuff Kit
+FFANoDebuff is a simple plugin of FFA but with the NoDebuff kit
