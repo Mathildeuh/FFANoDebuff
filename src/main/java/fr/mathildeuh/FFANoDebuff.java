@@ -57,6 +57,7 @@ public final class FFANoDebuff extends JavaPlugin {
 
     }
 
+    //??? c'est quoi sa mon reuf le theorme de thales ??
     public static boolean inCuboid(Location start, Location end, Location object){
         if(start == null || end == null || object == null) return false;
 
