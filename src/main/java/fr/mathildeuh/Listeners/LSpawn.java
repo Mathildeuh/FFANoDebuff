@@ -92,8 +92,11 @@ public class LSpawn implements Listener {
 
     @EventHandler
     public void onDrop(PlayerDropItemEvent e) {
+        Player player = event.getPlayer();
         if (e.getPlayer().getWorld().getName().equalsIgnoreCase(Bukkit.getWorld(FFANoDebuff.getInstance().getConfig().getString("world")).getName())) {
             e.setCancelled(true);
+            player.sendMessage(ChatColor.RED + "Tu ne peut pas jeter ton stuff ici >:(");
+            player.playSound(player.getLocation(),Sound.ENTITY_VILLAGER_NO, 2, 1);
         }
     }
 }
